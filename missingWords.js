@@ -1,5 +1,5 @@
 
-//takes fullArray, and compares it to Partialarray. It returns the element of fullArray not found in partialArray. 
+//takes fullArray, and compares it to partialArray. It returns an array of the elements of fullArray not found in partialArray. 
 function missingWords (fullArray, partialArray){
     console.log("fullArray = "+ fullArray); 
     console.log("partial Array = "+ partialArray); 
