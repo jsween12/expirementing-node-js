@@ -1,0 +1,19 @@
+{
+  "name": "final-project",
+  "version": "1.0.0",
+  "description": "final project ",
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server",
+    "start": "node server"
+  },
+  "author": "Jonathan Sweeney",
+  "license": "ISC",
+  "dependencies": {
+    "date-fns": "^2.28.0"
+    
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
