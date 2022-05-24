@@ -1,6 +1,8 @@
-const bubbleSort = require('./bubbleSort'); 
-const missingWords = require('./missingWords'); 
-const RandomArrayGeneration = require('./randomArray' ); 
+const bubbleSort = require('./controllers/bubbleSort'); 
+const selectSort = require('./controllers/selectSort'); 
+const missingWords = require('./controllers/missingWords'); 
+const RandomArrayGeneration = require('./controllers/randomArray' ); 
+const GetRequest = require('./controllers/GETRequest'); 
 
 const {v4: uuid} = require ('uuid'); 
 
@@ -19,7 +21,7 @@ console.log("This is the bubbleSort() results for the random array: " + sortedAr
 
 console.log("The random array is: " + RandomArray2 + "\n");
 
-console.log("The select sort results are: " + bubbleSort.bubbleSort(RandomArray2) + "\n"); 
+console.log("The select sort results are: " + selectSort.selectSort(RandomArray2) + "\n"); 
 
 console.log ("--------------------------------------------------------------------------------- \n")
 
@@ -38,6 +40,16 @@ console.log("The partial string converted to an Array is: " + partialArray + " \
 let theWords = missingWords.missingWords(fullArray, partialArray); 
 
 console.log("The missing words from string is: " + theWords); 
+
+console.log ("--------------------------------------------------------------------------------- \n")
+
+//Note: I'm having trouble with Async/Await. Below, the code is printing the message first, then going back and running the code that retrieves
+//the state info. I wanted to put await in front of GetRequest.getStatesFacts("KS"), but it wont let me. 
+
+let Data = GetRequest.getStatesFacts("OK"); 
+
+console.log("A GET request to the API server i wrote in class is: " + Data); 
+
 
 
 
