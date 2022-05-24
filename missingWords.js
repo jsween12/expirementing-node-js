@@ -1,8 +1,6 @@
 
 //takes fullArray, and compares it to partialArray. It returns an array of the elements of fullArray not found in partialArray. 
 function missingWords (fullArray, partialArray){
-    console.log("fullArray = "+ fullArray); 
-    console.log("partial Array = "+ partialArray); 
 
     let newArray = []; 
     let j = 0; 
