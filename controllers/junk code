@@ -1,0 +1,32 @@
+let promise = new Promise ((resolve,reject) => {
+
+        http.get(url, res => {
+            if(!StateAbbreviation){reject("no state abbreviation")}; 
+
+            let rawData =''; 
+            parsedData={}; 
+            let result = null; 
+            
+            
+                //chunk data gets appended into rawData. 
+                    res.on('data', chunk => {
+                        rawData += chunk; 
+                    }); 
+                
+                //when the data reached the end, parse the data into JSON, then return
+                    res.on('end', () => {
+                        result = JSON.parse(rawData); 
+                        setTimeout(function(){}, 3000); 
+                        resolve(result); 
+                    })
+                    console.log(result); 
+
+            })
+
+
+    })
+
+    promise.then(value => {
+        console.log("The then promise result is : " + value); 
+        return value; 
+    })

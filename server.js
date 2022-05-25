@@ -4,7 +4,8 @@ const missingWords = require('./controllers/missingWords');
 const RandomArrayGeneration = require('./controllers/randomArray' ); 
 const GetRequest = require('./controllers/GETRequest'); 
 
-const {v4: uuid} = require ('uuid'); 
+
+//const {v4: uuid} = require ('uuid'); 
 
 
 let RandomArray1 = RandomArrayGeneration.createRandomArray(20); 
@@ -43,12 +44,14 @@ console.log("The missing words from string is: " + theWords);
 
 console.log ("--------------------------------------------------------------------------------- \n")
 
-//Note: I'm having trouble with Async/Await. Below, the code is printing the message first, then going back and running the code that retrieves
-//the state info. I wanted to put await in front of GetRequest.getStatesFacts("KS"), but it wont let me. 
+console.log("I made an API in class that returns state facts @ https://fantasy-humdrum-restaurant.glitch.me/states/. It returns individual state facts with the state abbreviation added to the end")
+console.log("\n The following is the result of querying that api with the code : 'OK'"); 
 
-let Data = GetRequest.getStatesFacts("OK"); 
+GetRequest.getStatesFacts("OK"); 
 
-console.log("A GET request to the API server i wrote in class is: " + Data); 
+
+
+
 
 
 
